@@ -1,0 +1,55 @@
+.cupom {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--branco-neutro);
+    padding: 0.5rem;
+    position: relative;
+}
+
+
+.x {
+    position: absolute;
+    right: 10px;
+    cursor: pointer;
+}
+
+.menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 10rem;
+    padding: 18px;
+    font-weight: var(--semibold);
+}
+
+.menu__logo {
+    width: auto;
+    height: 24px;
+}
+
+.menu__links {
+    display: flex;
+    gap: 40px;
+}
+
+.menu__links a {
+    text-decoration: none;
+    color: var(--cinza);
+}
+
+.menu__link {
+    list-style: none;
+    text-decoration: none;
+}
+
+.select {
+    
+    color: var(--primary);
+}
+
+.menu__icons{
+    display: flex;
+    gap: 1rem;
+}
