@@ -1,0 +1,40 @@
+.items {
+    margin: 60px 10rem 100px 10rem;
+}
+
+.filter__dropdown {
+    display: flex;
+}
+
+.filter__titulo {
+    color: var(--cinza);
+    font-weight: var(--semibold);
+}
+
+.items__category {
+    display: flex;
+
+}
+
+.filter__dropdown {
+    display: flex;
+    gap: 24px;
+}
+
+.dropdown {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.filter__button {
+    width: 262px;
+    height: 48px;
+    border: 2px solid var(--cinza);
+    border-radius: 8px;
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1rem;
+}

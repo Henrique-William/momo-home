@@ -10,6 +10,7 @@ export const Header = () => {
     };
     return (
     <div>
+
       {/* Cupom */}
         {showCoupon && (
         <div className='cupom'>
@@ -36,6 +37,7 @@ export const Header = () => {
           </div>
         </div>
       )}
+      
       {/* menu */}
         <div className='menu'>
             <img
@@ -76,7 +78,7 @@ export const Header = () => {
               <p className='header__texto-negrito'>Loja</p>
             
             </p>
-            <p className='header__texto-titulo'>Página da loja</p>
+            <h2 className='header__texto-titulo'>Página da loja</h2>
             <p className='header__texto-subtitulo'>Vamos projetar o lugar que você sempre imaginou.</p>
           </div>
         </div>
