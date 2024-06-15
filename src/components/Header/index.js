@@ -1,12 +1,23 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './header.css';
 
 export const Header = () => {
     const [showCoupon, setShowCoupon] = useState(true);
+    const [showNotification, setShowNotification] = useState(true);
+    const notification = 2;
+
 
     const handleCloseCoupon = () => {
         setShowCoupon(false);
     };
+
+    useEffect(() => {
+      if (notification === 0) {
+          setShowNotification(false);
+      } else {
+          setShowNotification(true);
+      }
+    }, [notification]);
 
     return (
     <div>
@@ -59,7 +70,9 @@ export const Header = () => {
                   <a href='/'>
                     <img src='/images/icon/shopping-bag.svg' alt='sacola'/> 
                   </a>
-                  <div className='notification'>2</div>
+                  {showNotification && (
+                    <div className='notification'>{notification}</div>
+                  )}
                 </div>
                 
             </div>
