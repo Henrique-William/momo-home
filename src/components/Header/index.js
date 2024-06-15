@@ -2,15 +2,14 @@ import React, { useState } from 'react';
 import './header.css';
 
 export const Header = () => {
-
     const [showCoupon, setShowCoupon] = useState(true);
 
     const handleCloseCoupon = () => {
         setShowCoupon(false);
     };
+
     return (
     <div>
-
       {/* Cupom */}
         {showCoupon && (
         <div className='cupom'>
@@ -56,7 +55,13 @@ export const Header = () => {
             <div className='menu__icons'>
                 <a href='/'><img src='/images/icon/search.svg' alt='Pesquisar'/></a>
                 <a href='/'><img src='/images/icon/user-circle.svg' alt='perfil'/></a>
-                <a href='/'><img src='/images/icon/shopping-bag.svg' alt='sacola'/></a>
+                <div className='menu__sacola'>
+                  <a href='/'>
+                    <img src='/images/icon/shopping-bag.svg' alt='sacola'/> 
+                  </a>
+                  <div className='notification'>2</div>
+                </div>
+                
             </div>
         </div>
 
