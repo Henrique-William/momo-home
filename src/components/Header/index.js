@@ -6,11 +6,12 @@ export const Header = () => {
     const [showNotification, setShowNotification] = useState(true);
     const notification = 2;
 
-
     const handleCloseCoupon = () => {
         setShowCoupon(false);
     };
 
+
+    // Mostrar nº de Notificações se for = 0, não mostra na tela
     useEffect(() => {
       if (notification === 0) {
           setShowNotification(false);
