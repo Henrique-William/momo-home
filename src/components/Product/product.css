@@ -76,6 +76,7 @@
 
 .btn__like {
     display: flex;
+    gap: 4px;
     align-items: center;
     background-color: transparent;
     justify-content: center;
