@@ -29,7 +29,7 @@ export const Footer = () => {
         {/* Footer direitos */}
         <div className='footer__rights'>
             <div className='footer__copyrights'>
-                <p className='footer__copyrights-text'>Copyright © 2023 3legant. All rights reserved</p>
+                <p className='footer__copyrights-text'>Copyright © 2024 Henrique Silva. All rights reserved</p>
                 <p>Politicas de Privacidade</p>
                 <p>Termos de Uso</p>
             </div>
