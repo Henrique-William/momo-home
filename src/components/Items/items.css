@@ -67,7 +67,7 @@
 
 .dropdown__list li:hover {
     background-color: var(--primary);
-    transition: 0.8s;
+    transition: 0.5s;
     color: #fff;
 }
 

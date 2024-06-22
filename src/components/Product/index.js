@@ -5,8 +5,6 @@ export const Product = (props) => {
     let stars = props.stars;
     const isSaled = props.sale;
     
-
-
   return (
 
     <div className='product'>
