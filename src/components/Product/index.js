@@ -3,6 +3,9 @@ import './product.css'
 
 export const Product = (props) => {
     let stars = props.stars;
+    const isSaled = props.sale;
+    
+
 
   return (
 
@@ -13,14 +16,30 @@ export const Product = (props) => {
           src={props.img} 
           alt={props.alt}
         />
+
+        {/* sale */}
+        {isSaled && (
+          <div className='product__sale'>
+            -{props.saleValue} %
+          </div>
+        )} 
       </div>
+      
 
       <div className='product__texts'>
-        <div className='product__info'>
+        <div className='product__info-p'>
           <StarRating rating={stars} className='product__stars'/>
           <div className='product__title'>
             <h3>{props.title}</h3>
-            <p>${props.price}</p>
+            {isSaled && (            
+              <div className='prodcut__price-container'>
+                <p className='product__price'>${(props.price * (props.saleValue/100)).toFixed(2)}</p>
+                <p className='product__price-dash'>${props.price}</p>
+              </div>
+                
+              )}
+              {!isSaled &&(<p className='product__price'>${props.price}</p>)}
+            
           </div>
           <p>{props.description}</p>
         </div>

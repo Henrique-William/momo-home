@@ -12,6 +12,8 @@ export const ProductList = () => {
       img: '/images/products/pillow.png',
       alt: 'Imagem de uma almofada',
       stars: 3,
+      sale: true,
+      saleValue: 50,
       title: 'Almofada Off-White',
       price: 7.99,
       description: 'Capa de almofada supermacia em cor off-white com padrão tátil que realça os diferentes tons do pelo e da base.'
@@ -62,16 +64,18 @@ export const ProductList = () => {
     <div className='product-list'>
         <Items />
         <div className='products'>
-        {listaDeProdutos.map((produto, index) => (
+        {listaDeProdutos.map((product, index) => (
           
           <Product 
             key={index}
-            img={produto.img}
-            alt={produto.alt}
-            stars={produto.stars}
-            title={produto.title}
-            price={produto.price}
-            description={produto.description}
+            img={product.img}
+            sale={product.sale}
+            saleValue={product.saleValue}
+            alt={product.alt}
+            stars={product.stars}
+            title={product.title}
+            price={product.price}
+            description={product.description}
           />
 
         ))}
