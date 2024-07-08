@@ -15,12 +15,6 @@
 }
 
 /* Product texts */
-.star-rating img {
-    height: 16px;
-    width: 16px;
-    align-items: center;
-}
-
 .product__sale {
     position: absolute;
     padding: 4px 14px;
@@ -80,6 +74,8 @@
     display: flex;
     flex-direction: column;
     gap: 4px;
+    color: var(--primary);
+    font-weight: var(--semibold);
 }
 
 .product__title h3 {
@@ -104,14 +100,5 @@
     cursor: pointer;
 }
 
-.btn__like {
-    display: flex;
-    gap: 4px;
-    align-items: center;
-    background-color: transparent;
-    justify-content: center;
-    width: fit-content;
-    cursor: pointer;
-}
 
 

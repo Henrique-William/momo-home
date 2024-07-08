@@ -1,29 +1,25 @@
 import React from 'react';
-import { useState, useEffect } from 'react';
 import './items.css';
+import {DropDown} from '../DropDown'
 import { listaDeProdutos } from '../listaDeProdutos';
+import { useState } from 'react';
 
 export const Items = () => {
+  // tranformando um obj de categorais em array e passando via props
+  const uniqueCategories = [...new Set(listaDeProdutos.map((produto) => produto.categories))];
+  const [selectedCategory, setSelectedCategory] = useState('Todos'); // Initial selected category
+  const handleCategoryChange = (event) => {
+    setSelectedCategory(event.target.value);
+  };
 
   return (
     <div className='items'>
         <div className='items__category'>
-
-          {/* Filtro Dropdown */}
-          <div className='filter__dropdown'>
-          <Dropdown title='CATEGORIAS' button='Todos' onFilter={(item) => { /* Handle filter logic here */ }} />
-            {/* <Dropdown title='PREÇO' button='Todos os Preços'/>*/}
-          </div>
-
+        <DropDown categories={uniqueCategories} value={selectedCategory} onChange={handleCategoryChange} />
+        <div className='organizar'>
+        </div>
           {/* organizar */}
-          <div className='organizar'>
-            <button className='btn__organizar'>Ordenar por
-              <img 
-                src='/images/icon/chevron-down.svg' 
-                alt='icone para baixo'
-              />
-            </button>
-            
+          <div className='organizar'>          
             <div className='organizar__block'>
               <img 
                 src='images/icon/Toolbar Selector Buttons.svg' 
@@ -47,49 +43,4 @@ export const Items = () => {
         </div>
     </div>
   )
-};
-
-export const Dropdown = ({ title, button, onFilter }) => {
-  const [isChecked, setIsChecked] = useState(false);
-  const [selectedItem, setSelectedItem] = useState(button);
-  const categoriesSet = new Set(listaDeProdutos.map((item) => item.categories));
-  const categories = Array.from(categoriesSet);
-  console.log(categories);
-
-  const handleToggle = () => {
-    setIsChecked(!isChecked); // Toggle dropdown visibility
-  };
-
-  const handleItemClick = (item) => {
-    setSelectedItem(item); // Update selected category
-    setIsChecked(false); // Close dropdown after selection
-    onFilter(item); // Call the filter function with the selected category
-  };
-  
-
-  return (
-    <div className='dropdown'>
-      <p className='filter__titulo'>{title}</p>
-      <label className='dropdown__label'>
-        <input type='checkbox' checked={isChecked} className='dropdown__input' onChange={handleToggle} />
-        <p className='dropdown__btn'>
-          {selectedItem}
-          <img src='/images/icon/arrow-down.svg' alt='icone dropdown' />
-        </p>
-
-        {isChecked && (
-          <ul className='dropdown__list'>
-            <a> {/* Wrap in anchor tag for accessibility */}
-              <li onClick={() => handleItemClick('Todos')}>Todos</li> {/* Pass 'Todos' as the selected item */}
-            </a>
-            {categories.map((category) => (
-              <a> {/* Wrap in anchor tag for accessibility */}
-                <li key={category} onClick={() => handleItemClick(category)}>{category}</li>
-              </a>
-            ))}
-          </ul>
-        )}
-      </label>
-    </div>
-  );
 };

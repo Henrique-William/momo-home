@@ -11,6 +11,7 @@
   --laranja: #FFAB00;
   --vermelho: #FF5630;
   --branco-neutro: #F3F5F7;
+  --font: "Poppins", sans-serif;
 }
 
 *{
@@ -26,7 +27,7 @@ body {
   height: 100%;
   overflow-x: hidden; /* Evita scroll horizontal */
   box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
+  font-family: var(--font);
   font-weight: var(--regular);
   font-style: normal;
   font-size: 14px;

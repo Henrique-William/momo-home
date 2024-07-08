@@ -88,7 +88,7 @@ export const Header = () => {
             className='header__image'
           />
           <div className='header__texto'>
-            <p className='header__texto-link'>
+            <div className='header__texto-link'>
               Home 
               <img 
                 src='/images/icon/chevron-right.svg'
@@ -96,7 +96,7 @@ export const Header = () => {
               /> 
               <p className='header__texto-negrito'>Loja</p>
             
-            </p>
+            </div>
             <h2 className='header__texto-titulo'>Página da loja</h2>
             <p className='header__texto-subtitulo'>Vamos projetar o lugar que você sempre imaginou.</p>
           </div>

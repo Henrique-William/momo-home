@@ -1,20 +1,20 @@
 import React from 'react';
 import './product.css'
+import { StarRating } from '../StarRating';
+import { LikeBtn } from '../LikeBtn';
 
 export const Product = (props) => {
-    let stars = props.stars;
+    const stars = props.stars;
     const isSaled = props.sale;
     
   return (
-
     <div className='product'>
-      
+      {/* image holder */}
       <div className='product__img'>
         <img 
           src={props.img} 
           alt={props.alt}
         />
-
         {/* sale */}
         {isSaled && (
           <div className='product__sale'>
@@ -22,8 +22,7 @@ export const Product = (props) => {
           </div>
         )} 
       </div>
-      
-
+      {/* description product */}
       <div className='product__texts'>
         <div className='product__info-p'>
           <StarRating rating={stars} className='product__stars'/>
@@ -41,32 +40,15 @@ export const Product = (props) => {
           </div>
           <p>{props.description}</p>
         </div>
-
+        {/* product buttons */}
         <div className='product__btns'>
           <button className='btn__bag'>Adicionar à sacola</button>
-          <button className='btn__like'> 
-            <img 
-              src='images/icon/like.svg' alt=''
-            />Wishlist
-          </button>
+          <LikeBtn produtoID={props.id}>
+            Wishlist
+          </LikeBtn>
         </div>
         
       </div>
     </div>
   )
-};
-
-export const StarRating = ({rating}) => {
-
-  const fullStars = Math.floor(rating);  // número de estrelas inteiras
-  const halfStar = rating % 1 !== 0;     // verifica se tem meia estrela
-
-  return (
-    <div className="star-rating">
-      {[...Array(fullStars)].map((_, index) => (
-        <img key={index} src="/images/icon/star-icon.svg" alt="full star" />
-      ))}
-      {halfStar && <img src="/images/icon/half-star-icon.svg" alt="half star" />}
-    </div>
-  );
 };

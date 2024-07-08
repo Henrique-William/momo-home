@@ -1,18 +1,19 @@
 import React from 'react';
 import './product_list.css';
-import { Items } from '../Items';
+// import { Items } from '../Items';
 import { Product } from '../Product';
 import { listaDeProdutos } from '../listaDeProdutos';   //array de produtos
 
 export const ProductList = () => {
   return (
     <div className='product-list'>
-        <Items />
+        {/* <Items /> */}
         <div className='products'>
 
           {listaDeProdutos.map((product, index) => (
             <Product 
               key={index}
+              id={product.id}
               img={product.img}
               sale={product.sale}
               saleValue={product.saleValue}
