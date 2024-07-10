@@ -6,17 +6,27 @@
 
 .product__img {
     background-color: #F3F5F7;
-    width: 265px;
+    width: 50%;
+    height: 100%;
     display: flex;
     flex-direction: column;
-    object-fit: cover;
     position: relative;
     z-index: -1;
+    justify-content: center;
+    align-items: center;
+}
+
+.product__img img {
+    object-fit: cover;
+    width: 70%;
+    height: min-content;
 }
 
 /* Product texts */
 .product__sale {
     position: absolute;
+    left: 0px;
+    top: 0px;
     padding: 4px 14px;
     background-color: var(--verde);
     width: max-content;
@@ -99,6 +109,3 @@
     padding: 16px 0;
     cursor: pointer;
 }
-
-
-

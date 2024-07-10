@@ -4,12 +4,11 @@ import './header.css';
 export const Header = () => {
     const [showCoupon, setShowCoupon] = useState(true);
     const [showNotification, setShowNotification] = useState(true);
-    const notification = 2;
+    const notification = 0;
 
     const handleCloseCoupon = () => {
         setShowCoupon(false);
     };
-
 
     // Mostrar nº de Notificações se for = 0, não mostra na tela
     useEffect(() => {

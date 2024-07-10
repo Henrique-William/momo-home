@@ -5,10 +5,11 @@ export const LikeBtn = (props) => {
     const [isLiked, setIsLiked] = useState(false);
     const itemID = props.produtoID;
 
-    const toggleWish = () => {
+    const toggleWish = async()  => {
         const wishStatus = !isLiked
         setIsLiked(wishStatus)
         console.log(wishStatus ? 'Entrou o produto': 'Saiu o Produto', itemID)
+        
     }
 
   return (
@@ -17,7 +18,10 @@ export const LikeBtn = (props) => {
         <img src='images/icon/like_full.svg' alt=''/> :
         <img src='images/icon/like.svg' alt=''/>
     }
-    {props.children}
+    <p className='textbtn'>
+      {props.children}
+    </p>
+    
     </button>
 
   )
