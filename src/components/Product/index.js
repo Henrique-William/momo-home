@@ -1,6 +1,6 @@
 import "./product.css";
 import { StarRating } from "../StarRating";
-import { LikeBtn } from "../LikeBtn";
+import { WishButton } from "../WishButton";
 
 import PocketBase from "pocketbase";
 const pb = new PocketBase("http://127.0.0.1:8090");
@@ -13,7 +13,7 @@ export const Product = (props) => {
     <div className="product">
       {/* image holder */}
       <div className="product__img">
-        <img src={pb.files.getUrl(props.product, props.img)} alt={props.alt}/>
+        <img src={pb.files.getUrl(props.product, props.img)} alt={props.alt} />
         {/* sale */}
         {isSaled && <div className="product__sale">-{props.saleValue} %</div>}
       </div>
@@ -36,11 +36,11 @@ export const Product = (props) => {
           </div>
           <p>{props.description}</p>
         </div>
-        
+
         {/* product buttons */}
         <div className="product__btns">
           <button className="btn__bag">Adicionar à sacola</button>
-          <LikeBtn produtoID={props.id}>Wishlist</LikeBtn>
+          <WishButton produtoID={props.id}>Wishlist</WishButton>
         </div>
       </div>
     </div>

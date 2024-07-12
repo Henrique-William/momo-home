@@ -1,6 +1,6 @@
 .product {
     width: 100%;
-    height: 349px;
+    min-height: 349px;
     display: flex;
 }
 

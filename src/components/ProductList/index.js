@@ -11,11 +11,8 @@ async function getProducts() {
 }
 
 export const ProductList = () => {
-  getProducts()
-    .then((event) => console.log(event))
-    .catch((event) => console.log(event));
-
   const [product, setProduct] = useState([]);
+
   useEffect(() => {
     getProducts()
       .then((event) => setProduct(event))
@@ -28,7 +25,7 @@ export const ProductList = () => {
       <div className="products">
         {product.map((product, index) => (
           <Product
-            product = {product}
+            product={product}
             key={index}
             id={product.id}
             img={product.img}
