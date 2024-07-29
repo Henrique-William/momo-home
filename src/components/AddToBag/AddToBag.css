@@ -1,0 +1,29 @@
+.btn__bag {
+    background-color: var(--primary);
+    color: #fff;
+    border-radius: 8px;
+    width: 100%;
+    padding: 16px 0;
+    cursor: pointer;
+}
+
+.btn__bag-blocked {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border-radius: 8px;
+    width: 100%;
+    padding: 16px 0;
+    cursor: not-allowed;
+}
+
+
+.btn__bag-small {
+    background-color: var(--primary);
+    color: #fff;
+    border-radius: 8px;
+    width: fit-content;
+    padding: 12px 24px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: var(--regular);
+}

@@ -1,16 +1,16 @@
-import './starRating.css'
+import "./starRating.css";
+import { FaStar, FaStarHalfAlt } from "react-icons/fa";
 
-export const StarRating = ({rating}) => {
+export const StarRating = ({ rating }) => {
+  const fullStars = Math.floor(rating); // número de estrelas inteiras
+  const halfStar = rating % 1 !== 0; // verifica se tem meia estrela
 
-    const fullStars = Math.floor(rating);  // número de estrelas inteiras
-    const halfStar = rating % 1 !== 0;     // verifica se tem meia estrela
-  
-    return (
-      <div className="star-rating">
-        {[...Array(fullStars)].map((_, index) => (
-          <img key={index} src="/images/icon/star-icon.svg" alt="full star" />
-        ))}
-        {halfStar && <img src="/images/icon/half-star-icon.svg" alt="half star" />}
-      </div>
-    );
-  };
+  return (
+    <div className="star-rating">
+      {[...Array(fullStars)].map((_, index) => (
+        <FaStar key={index} color="black"/>
+      ))}
+      {halfStar && <FaStarHalfAlt color="black"/>}
+    </div>
+  );
+};

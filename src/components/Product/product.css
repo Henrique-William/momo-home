@@ -22,7 +22,6 @@
     height: min-content;
 }
 
-/* Product texts */
 .product__sale {
     position: absolute;
     left: 0px;
@@ -40,6 +39,8 @@
     margin: 16px;
 }
 
+
+/* Product texts */
 .prodcut__price-container {
     display: flex;
     gap: 12px;
@@ -101,11 +102,3 @@
     gap: 8px;
 }
 
-.btn__bag {
-    background-color: var(--primary);
-    color: #fff;
-    border-radius: 8px;
-    width: 100%;
-    padding: 16px 0;
-    cursor: pointer;
-}

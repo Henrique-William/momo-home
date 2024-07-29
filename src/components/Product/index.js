@@ -1,6 +1,8 @@
+/* eslint-disable no-undef */
 import "./product.css";
 import { StarRating } from "../StarRating";
 import { WishButton } from "../WishButton";
+import { AddToBag } from "../AddToBag";
 
 import PocketBase from "pocketbase";
 const pb = new PocketBase("http://127.0.0.1:8090");
@@ -8,10 +10,9 @@ const pb = new PocketBase("http://127.0.0.1:8090");
 export const Product = (props) => {
   const stars = props.stars;
   const isSaled = props.sale;
-
+  
   return (
     <div className="product">
-      {/* image holder */}
       <div className="product__img">
         <img src={pb.files.getUrl(props.product, props.img)} alt={props.alt} />
         {/* sale */}
@@ -25,7 +26,7 @@ export const Product = (props) => {
           <div className="product__title">
             <h3>{props.title}</h3>
             {isSaled && (
-              <div className="prodcut__price-container">
+              <div className="product__price-container">
                 <p className="product__price">
                   ${(props.price * (props.saleValue / 100)).toFixed(2)}
                 </p>
@@ -39,8 +40,10 @@ export const Product = (props) => {
 
         {/* product buttons */}
         <div className="product__btns">
-          <button className="btn__bag">Adicionar à sacola</button>
-          <WishButton produtoID={props.id}>Wishlist</WishButton>
+          <AddToBag produtoID={props.id} inBag={props.isOnBag} />
+          <WishButton produtoID={props.id} likeStatus={props.likedProducts}>
+            Wishlist
+          </WishButton>
         </div>
       </div>
     </div>

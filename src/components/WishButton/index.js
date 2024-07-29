@@ -1,53 +1,75 @@
 import React, { useState } from "react";
 import "./like.css";
+import { Snackbar } from "@mui/material";
+import { TbHeart, TbHeartFilled } from "react-icons/tb";
 
 import PocketBase from "pocketbase";
 const pb = new PocketBase("http://127.0.0.1:8090");
 
 export const WishButton = (props) => {
-  const [isLiked, setIsLiked] = useState(false);
+  const [isLiked, setIsLiked] = useState(props.likeStatus);
+  const [open, setOpen] = useState(false);
   const itemID = props.produtoID;
-  const [user, setUser] = useState([]);
-  const userLogado = 'qusg17bsgc871rb';
+  const userID = "qusg17bsgc871rb";
+  const collectionName = "users";
 
-  async function getUsers() {
-    const recordedUser = await pb.collection("users").getOne(userLogado);
-    const recordedWish = recordedUser.wish;
-    return recordedWish;
+  async function updateWishList() {
+    const wishStatus = !isLiked;
+    setIsLiked(wishStatus);
+    setOpen(true);
+
+    try {
+      // Obtém o documento atual (users)
+      const user = await pb.collection(collectionName).getOne(userID);
+      let currentList = user.wish;
+
+      if (!Array.isArray(currentList) || currentList.length === 0) {
+        currentList = [{ productWishID: [] }, { productBagID: [] }];
+      }
+
+      let currentWishList = currentList[0].productWishID || [];
+
+      if (wishStatus === true) {
+        // Adiciona o item ao array se não estiver presente
+        if (!currentWishList.includes(itemID)) {
+          currentWishList = [...currentWishList, itemID];
+        }
+      } else {
+        // Remove o item do array se estiver presente
+        currentWishList = currentWishList.filter((id) => id !== itemID);
+      }
+
+      currentList[0].productWishID = currentWishList;
+      // atualiza a lista de desejo após ser executado as condições acima
+      await pb.collection(collectionName).update(userID, {
+        wish: currentList,
+      });
+    } catch (error) {
+      console.error("Erro ao atualizar o documento:", error);
+    }
   }
 
-  const toggleWish = async () => {
-    const wishStatus = !isLiked;
-    
-    setIsLiked(wishStatus);
-    console.log(wishStatus ? "Entrou o produto" : "Saiu o Produto", itemID);
-    // busca o user wish do banco de dados
-    try {
-      const userList = await getUsers();
-      setUser(userList);
-      console.log({ user }); // Log the fetched user data
-    } catch (error) {
-      console.error("Error fetching user:", error);
+  const handleClose = (event, reason) => {
+    if (reason === "clickaway") {
+      return;
     }
-
-    if (wishStatus === true){
-      pb.collection("users").update(userLogado, {
-        wish: { productWishID: [...user, itemID] },
-      });
-    } else {
-      pb.collection("users").update(userLogado, {
-        wish: { productWishID: "" },
-      });
-    }
+    setOpen(false);
   };
-  
+
   return (
-    <button className="likebtn" onClick={toggleWish}>
-      {isLiked ? (
-        <img src="images/icon/like_full.svg" alt="" />
-      ) : (
-        <img src="images/icon/like.svg" alt="" />
-      )}
+    <button className="likebtn" onClick={updateWishList}>
+      <Snackbar
+        open={open}
+        autoHideDuration={2000}
+        message={
+          isLiked
+            ? "Adicionado à lista de desejos"
+            : "Removido da lista de desejos"
+        }
+        onClose={handleClose}
+        className="snackbar"
+      />
+      {isLiked ? <TbHeartFilled color="red" /> : <TbHeart />}
       <p className="textbtn">{props.children}</p>
     </button>
   );
