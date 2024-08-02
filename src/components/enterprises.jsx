@@ -1,4 +1,5 @@
 function Enterprises() {
+
   return (
     <section className="mx-40 my-10 flex justify-between">
         <img src="/images/team-logo/logo01.svg" alt="logo de empresas"/>
