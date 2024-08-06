@@ -6,13 +6,12 @@ function Header() {
   return (
     <>
       {/* Header */}
-      
       <div className="h-screen">
         <div className="absolute w-full object-cover top-0">
           <Cupom />
           <Menu />
         </div>
-        
+
         <img
           src="/images/image-header.png"
           alt="header img"
@@ -20,7 +19,6 @@ function Header() {
         />
 
         {/* Menu */}
-
         <div className="w-2/4 absolute flex-row top-1/4 left-2/4 ">
           <h1 className="text-8xl font-medium text-left my-2 pb-10">
             Listen to <br />
@@ -33,7 +31,7 @@ function Header() {
           </h1>
 
           <p
-            className="py-3 px-14 w-fit bg-button text-white rounded-md cursor-pointer"
+            className="py-3 px-14 w-fit bg-dark text-white rounded-md cursor-pointer"
             id="button"
           >
             Shopping Now
