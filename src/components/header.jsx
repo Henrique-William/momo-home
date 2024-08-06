@@ -31,7 +31,7 @@ function Header() {
           </h1>
 
           <p
-            className="py-3 px-14 w-fit bg-button text-white rounded-md cursor-pointer"
+            className="py-3 px-14 w-fit bg-dark text-white rounded-md cursor-pointer"
             id="button"
           >
             Shopping Now

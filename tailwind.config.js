@@ -4,6 +4,12 @@ module.exports = {
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
+      aspectRatio: {
+        '2/3': '16 / 9',
+      },
+      height: {
+        'custom-664': '664px',
+      },
       fontSize: {
         section: '2.5rem'
       },
@@ -13,8 +19,8 @@ module.exports = {
       colors: {
         primary: '#FFAB00',
         secondary: '#377DFF',
-        button: '#141718',
-        holder: 'F3F5F7'
+        dark: '#141718',
+        holder: '#F3F5F7'
       },
     },
   },
