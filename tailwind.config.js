@@ -4,11 +4,15 @@ module.exports = {
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
+      padding: {
+        '18': '4.5rem'
+      },
       aspectRatio: {
         '2/3': '16 / 9',
       },
       height: {
         'custom-664': '664px',
+        '55': '13.75rem'
       },
       fontSize: {
         section: '2.5rem'
@@ -20,7 +24,9 @@ module.exports = {
         primary: '#FFAB00',
         secondary: '#377DFF',
         dark: '#141718',
-        holder: '#F3F5F7'
+        subtitle: '#6C7275',
+        holder: '#F3F5F7',
+        promotion: 'rgba(255, 171, 0, 0.4)'
       },
     },
   },

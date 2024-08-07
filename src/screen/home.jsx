@@ -4,6 +4,8 @@ import { BestSeller, CarouselProduct } from "../components/showProducts";
 
 import { productList } from "../lists";
 import ShopCollection from "../components/shopCollection";
+import PromotionCount from "../components/promotionCount";
+import HomeInfo from "../components/homeInfo";
 
 function Home() {
   return (
@@ -13,6 +15,8 @@ function Home() {
       <CarouselProduct productList={productList} />
       <ShopCollection/>
       <BestSeller/>
+      <PromotionCount/>
+      <HomeInfo/>
     </>
   );
 }

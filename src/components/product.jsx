@@ -1,7 +1,7 @@
 import { AddToBag, ProductLikeButton } from "./buttons";
 import StarRating from "./starRating";
 
-function Product({ key, title, price, img, stars, tag }) {
+function Product({ id, title, price, img, stars, tag, sale, saleValue }) {
   return (
     <div className="flex flex-col gap-3 group cursor-pointer">
       {/* image-holder */}
@@ -16,13 +16,24 @@ function Product({ key, title, price, img, stars, tag }) {
           {tag}
         </p>
         <AddToBag />
-        <ProductLikeButton productID={key} />
+        <ProductLikeButton productID={id} />
       </div>
       {/* info products */}
       <div className="h-24 flex flex-col gap-1">
         <StarRating stars={stars} />
-        <h4 className="text-dark font-semibold text-base">{title}</h4>
-        <p className="text-dark font-semibold text-sm">${price}</p>
+        <h4 className="h-2/3 text-dark font-semibold text-base">{title}</h4>
+        {!sale ? (
+          <p className="h-1/3 text-dark font-semibold text-sm">
+            ${price.toFixed(2)}
+          </p>
+        ) : (
+          <p className="h-1/3 flex text-dark font-semibold text-sm gap-2">
+            ${price - (price * (saleValue / 100)).toFixed(2)}{" "}
+            <span className="text-subtitle  line-through">
+              ${price.toFixed(2)}
+            </span>
+          </p>
+        )}
       </div>
     </div>
   );

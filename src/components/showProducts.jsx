@@ -54,6 +54,8 @@ export function CarouselProduct({ productList }) {
                     img={product.img}
                     stars={product.stars}
                     tag={product.tag}
+                    sale={product.sale}
+                    saleValue={product.saleValue}
                   />
                   <p className="pb-14"></p>
                 </SwiperSlide>
@@ -67,19 +69,22 @@ export function CarouselProduct({ productList }) {
 
 export function BestSeller() {
   return (
-    <div className="mx-40 flex-row mt-12">
+    <div className="mx-40 flex-row mt-12 mb-24">
       <h1 className=" text-5xl font-medium">Best Seller</h1>
       <section className="my-12 grid grid-cols-4 gap-x-6 gap-y-12">
         {productList
           .filter((product) => product.tag === "HOT")
           .map((product) => (
             <Product
-              product={product}
+              key={product.id} // Use a unique identifier from the product object
+              id={product.id}
               title={product.title}
               price={product.price}
               img={product.img}
               stars={product.stars}
               tag={product.tag}
+              sale={product.sale}
+              saleValue={product.saleValue}
             />
           ))}
       </section>

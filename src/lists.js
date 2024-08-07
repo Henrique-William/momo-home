@@ -6,8 +6,8 @@ export const productList = [
     img: "/images/products/headphone01.png",
     stars: 4.5,
     tag: "NEW",
-    sale: false,
-    saleValue: 0,
+    sale: true,
+    saleValue: 20,
   },
   {
     id: 2,
@@ -16,8 +16,8 @@ export const productList = [
     img: "/images/products/headphone-beatspro.png",
     stars: 4.5,
     tag: "NEW",
-    sale: false,
-    saleValue: 0,
+    sale: true,
+    saleValue: 30,
   },
   {
     id: 3,
@@ -72,7 +72,7 @@ export const productList = [
   {
     id: 7,
     title: "Apple Airpods Max",
-    price: 549.00,
+    price: 549.0,
     img: "/images/products/airpods-max.png",
     stars: 5,
     tag: "HOT",
@@ -92,7 +92,7 @@ export const productList = [
   {
     id: 9,
     title: "Apple Airpods Pro",
-    price: 249.00,
+    price: 249.0,
     img: "/images/products/airpods-pro.png",
     stars: 5,
     tag: "HOT",
@@ -139,6 +139,24 @@ export const productList = [
     sale: false,
     saleValue: 0,
   },
+  {
+    id: 14,
+    title: "Jabra Evolve2 85",
+    price: 373.00,
+    img: "/images/products/jabra-evolve2.png",
+    stars: 5,
+    tag: "NEW",
+    sale: false,
+    saleValue: 0,
+  },
 ];
 
-export const user = [{}];
+export const user = [
+  {
+    id: "0001",
+    name: "Henrique William Oliveira da Silva",
+    password: "123teste",
+    email: "os.heriquewilliam@gmail.com",
+    lists: [{ productWish: ["12", "4"] }, { productBag: ["10", "8"] }],
+  },
+];
