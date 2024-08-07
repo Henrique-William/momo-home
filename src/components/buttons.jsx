@@ -30,3 +30,11 @@ export function AddToBag() {
     </button>
   );
 }
+
+export function ShopNow({ children }) {
+  return (
+    <button className="w-fit bg-dark text-white py-2 px-10 rounded-lg text-base">
+      {children}
+    </button>
+  );
+}

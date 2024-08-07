@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { ShopNow } from "./buttons";
 
 function PromotionCount() {
   const calculateTimeLeft = () => {
@@ -29,7 +30,6 @@ function PromotionCount() {
   const formatNumber = (number) => {
     return String(number).padStart(2, "0");
   };
-  
 
   return (
     <section className="grid grid-cols-2 h-fit">
@@ -49,37 +49,41 @@ function PromotionCount() {
           <p className="text-xl">Thousands of high tech are waiting for you</p>
         </div>
         {/* countdown */}
-        <div className="grid grid-cols-4 w-fit gap-4 text-4xl font-medium ">
-          {/* days */}
-          <div className="flex flex-col items-center">
-            <span className="flex justify-center items-center bg-white w-16 h-16">
-              {formatNumber(timeLeft.days) || "00"}
-            </span>
-            <p className="text-xs font-normal">Days</p>
-          </div>
-          {/* hours */}
-          <div className="flex flex-col items-center">
-            <span className="flex justify-center items-center bg-white w-16 h-16">
-              {formatNumber(timeLeft.hours) || "00"}
-            </span>
-            <p className="text-xs font-normal">Hours</p>
-          </div>
-          {/* minutes */}
-          <div className="flex flex-col items-center">
-            <span className="flex justify-center items-center bg-white w-16 h-16">
-              {formatNumber(timeLeft.minutes) || "00"}
-            </span>
-            <p className="text-xs font-normal">Minutes</p>
-          </div>
-          {/* seconds */}
-          <div className="flex flex-col items-center">
-            <span className="flex justify-center items-center bg-white w-16 h-16">
-              {formatNumber(timeLeft.seconds) || "00"}
-            </span>
-            <p className="text-xs font-normal">Seconds</p>
+        <div>
+          <p className="mb-3">Offer expires in:</p>
+          <div className="grid grid-cols-4 w-fit gap-4 text-4xl font-medium ">
+            {/* days */}
+            <div className="flex flex-col items-center">
+              <span className="flex justify-center items-center bg-white w-16 h-16">
+                {formatNumber(timeLeft.days) || "00"}
+              </span>
+              <p className="text-xs font-normal">Days</p>
+            </div>
+            {/* hours */}
+            <div className="flex flex-col items-center">
+              <span className="flex justify-center items-center bg-white w-16 h-16">
+                {formatNumber(timeLeft.hours) || "00"}
+              </span>
+              <p className="text-xs font-normal">Hours</p>
+            </div>
+            {/* minutes */}
+            <div className="flex flex-col items-center">
+              <span className="flex justify-center items-center bg-white w-16 h-16">
+                {formatNumber(timeLeft.minutes) || "00"}
+              </span>
+              <p className="text-xs font-normal">Minutes</p>
+            </div>
+            {/* seconds */}
+            <div className="flex flex-col items-center">
+              <span className="flex justify-center items-center bg-white w-16 h-16">
+                {formatNumber(timeLeft.seconds) || "00"}
+              </span>
+              <p className="text-xs font-normal">Seconds</p>
+            </div>
           </div>
         </div>
         {/* button */}
+        <ShopNow>Shop Now</ShopNow>
       </div>
     </section>
   );
