@@ -39,7 +39,7 @@ function PromotionCount() {
         className="w-full object-center"
       />
       {/* Count Down Container */}
-      <div className="bg-promotion w-full px-18 flex flex-col justify-center gap-6">
+      <div className="bg-promotion w-full h-full px-18 flex flex-col justify-center gap-6">
         {/* promotion title */}
         <div className="flex flex-col gap-4">
           <span className="text-secondary font-bold text-base uppercase">

@@ -6,6 +6,7 @@ import { productList } from "../lists";
 import ShopCollection from "../components/shopCollection";
 import PromotionCount from "../components/promotionCount";
 import HomeInfo from "../components/homeInfo";
+import Socials from "../components/socials";
 
 function Home() {
   return (
@@ -17,7 +18,7 @@ function Home() {
       <BestSeller/>
       <PromotionCount/>
       <HomeInfo/>
-      
+      <Socials />
     </>
   );
 }
