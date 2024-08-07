@@ -1,8 +1,6 @@
 import { useState, useEffect } from "react";
 
 function PromotionCount() {
-  console.log(new Date());
-
   const calculateTimeLeft = () => {
     const difference = +new Date("2024-08-13 : 23:59:59") - +new Date();
     let timeLeft = {};
