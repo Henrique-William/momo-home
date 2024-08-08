@@ -25,7 +25,7 @@ function Header() {
             the <b className="text-blue-500 font-medium">amazing</b>
             <br />
             music sound.
-            <p className="text-lg font-normal">
+            <p className="text-xl font-normal">
               Experience music like never before
             </p>
           </h1>
