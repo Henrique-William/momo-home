@@ -7,6 +7,7 @@ import ShopCollection from "../components/shopCollection";
 import PromotionCount from "../components/promotionCount";
 import HomeInfo from "../components/homeInfo";
 import Socials from "../components/socials";
+import Footer from "../components/footer";
 
 function Home() {
   return (
@@ -19,6 +20,7 @@ function Home() {
       <PromotionCount/>
       <HomeInfo/>
       <Socials />
+      <Footer />
     </>
   );
 }

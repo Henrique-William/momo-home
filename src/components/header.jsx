@@ -13,7 +13,7 @@ function Header() {
         </div>
 
         <img
-          src="/images/image-header.png"
+          src="/images/Image-header.png"
           alt="header img"
           className="h-full w-full object-cover z-0"
         />
