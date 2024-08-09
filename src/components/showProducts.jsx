@@ -3,14 +3,13 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import { Pagination } from "swiper/modules";
-import { productList } from "../lists";
 
 export function CarouselProduct({ productList }) {
   return (
-    <div className="pt-12 flex-row">
-      <h1 className="mx-40 text-5xl font-medium">New Arrivals</h1>
+    <div className="pt-12 flex-row max-md:pt-8">
+      <h1 className="mx-40 text-5xl font-medium max-md:mx-8 max-md:text-4xl max-md:text-center">New Arrivals</h1>
       {/* product list */}
-      <section className="my-12 ml-40 flex">
+      <section className="my-12 ml-40 flex max-md:ml-8">
         <Swiper
           slidesPerView={1.5}
           spaceBetween={10}
@@ -57,7 +56,7 @@ export function CarouselProduct({ productList }) {
                     sale={product.sale}
                     saleValue={product.saleValue}
                   />
-                  <p className="pb-14"></p>
+                  <p className="pb-14 max-md:pb-10"></p>
                 </SwiperSlide>
               ))}
           </div>
@@ -67,11 +66,11 @@ export function CarouselProduct({ productList }) {
   );
 }
 
-export function BestSeller() {
+export function BestSeller({productList}) {
   return (
-    <div className="mx-40 flex-row mt-12 mb-24">
-      <h1 className=" text-5xl font-medium">Best Seller</h1>
-      <section className="my-12 grid grid-cols-4 gap-x-6 gap-y-12">
+    <div className="mx-40 flex-row mt-12 mb-24 max-md:mx-8">
+      <h1 className=" text-5xl font-medium max-md:mx-8 max-md:text-4xl max-md:text-center">Best Seller</h1>
+      <section className="my-12 grid grid-cols-4 gap-x-6 gap-y-12 max-md:grid-cols-2">
         {productList
           .filter((product) => product.tag === "HOT")
           .map((product) => (

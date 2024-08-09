@@ -16,7 +16,7 @@ function Home() {
       <Enterprises/>
       <CarouselProduct productList={productList} />
       <ShopCollection/>
-      <BestSeller/>
+      <BestSeller productList={productList}/>
       <PromotionCount/>
       <HomeInfo/>
       <Socials />

@@ -32,25 +32,25 @@ function PromotionCount() {
   };
 
   return (
-    <section className="grid grid-cols-2 h-fit">
+    <section className="grid grid-cols-2 h-fit max-md:grid-cols-1 max-md:grid max-md:grid-flow-dense">
       <img
         src="/images/promotion-img.png"
         alt=""
-        className="w-full object-center"
+        className="max-md:order-2 w-full object-center max-md:w-auto max-md:object-cover max-md:h-96"
       />
       {/* Count Down Container */}
-      <div className="bg-promotion w-full h-full px-18 flex flex-col justify-center gap-6">
+      <div className="max-md:order-1 bg-promotion w-full h-full px-18 flex flex-col justify-center gap-6 max-md:px-8 max-md:py-7">
         {/* promotion title */}
         <div className="flex flex-col gap-4">
           <span className="text-secondary font-bold text-base uppercase">
             Promotion
           </span>
-          <h2 className="text-5xl font-semibold ">Hurry up! 40% OFF</h2>
-          <p className="text-xl">Thousands of high tech are waiting for you</p>
+          <h2 className="text-5xl font-semibold max-md:text-4xl">Hurry up! 40% OFF</h2>
+          <p className="text-xl max-md:text-sm">Thousands of high tech are waiting for you</p>
         </div>
         {/* countdown */}
         <div>
-          <p className="mb-3">Offer expires in:</p>
+          <p className="mb-3 max-md:text-base">Offer expires in:</p>
           <div className="grid grid-cols-4 w-fit gap-4 text-4xl font-medium ">
             {/* days */}
             <div className="flex flex-col items-center">

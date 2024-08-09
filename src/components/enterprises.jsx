@@ -1,7 +1,7 @@
 function Enterprises() {
 
   return (
-    <section className="mx-40 my-10 flex justify-between">
+    <section className="mx-40 my-10 grid grid-cols-6 gap-6 max-md:mx-8">
         <img src="/images/team-logo/logo01.svg" alt="logo de empresas"/>
         <img src="/images/team-logo/logo02.svg" alt="logo de empresas"/>
         <img src="/images/team-logo/logo03.svg" alt="logo de empresas"/>

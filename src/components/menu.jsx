@@ -16,10 +16,10 @@ function Menu() {
   return (
     <>
       {/* menu */}
-      <div className="flex items-center justify-between mx-40 py-4 box-border">
+      <div className="flex items-center justify-between mx-40 py-4 box-border max-md:mx-8">
         <img src="/images/logo.png" alt="Logo" />
 
-        <ul className="flex gap-10">
+        <ul className="flex gap-10 max-md:hidden">
           <a href="/">
             <li>Home</li>
           </a>
@@ -35,10 +35,10 @@ function Menu() {
         </ul>
 
         <div className="flex">
-          <a href="/">
+          <a className="max-md:hidden" href="/">
             <img src="/images/icon/search.svg" alt="Pesquisar" />
           </a>
-          <a href="/">
+          <a className="max-md:hidden" href="/">
             <img src="/images/icon/user-circle.svg" alt="perfil" />
           </a>
           <div className="menu__sacola">

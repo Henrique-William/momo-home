@@ -10,12 +10,12 @@ function Cupom() {
     <div>
       {/* Cupom */}
       {showCoupon && (
-        <div className="bg-black flex items-center justify-center text-white p-2 gap-2 text-sm">
+        <div className="w-full bg-black flex items-center justify-center text-white p-2 gap-2 text-sm">
           <img src="/images/icon/ticket-percent.svg" alt="Ícone de cupom" />
 
           <p>30% de desconto — Tempo Limitado!</p>
 
-          <div className="flex border-b-2 border-yellow-500">
+          <div className="flex border-b-2 border-yellow-500 max-md:hidden">
             <a href="/" className="text-yellow-500">
               Compre Agora
             </a>
