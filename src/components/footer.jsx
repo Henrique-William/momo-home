@@ -43,7 +43,7 @@ function Footer() {
             <p className="text-subtitle font-normal text-sm">
               Copyright © 2023 3legant. All rights reserved
             </p>
-            <div className="max-md:flex max-md:gap-7">
+            <div className="flex gap-7 max-md:flex">
               <p className="text-white text-xs font-semibold">Privacy Policy</p>
               <p className="text-white text-xs font-semibold">Terms of Use</p>
             </div>

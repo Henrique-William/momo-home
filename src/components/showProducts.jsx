@@ -1,15 +1,15 @@
 import Product from "./product";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
-import "swiper/css/pagination";
-import { Pagination } from "swiper/modules";
 
 export function CarouselProduct({ productList }) {
   return (
     <div className="pt-12 flex-row max-md:pt-8">
-      <h1 className="mx-40 text-5xl font-medium max-md:mx-8 max-md:text-4xl max-md:text-center">New Arrivals</h1>
+      <h1 className="mx-40 text-5xl font-medium max-md:mx-8 max-md:text-4xl max-md:text-center max-md:font-semibold">
+        New Arrivals
+      </h1>
       {/* product list */}
-      <section className="my-12 ml-40 flex max-md:ml-8">
+      <section className="my-12 ml-40 flex max-md:ml-8 max-md:mt-10">
         <Swiper
           slidesPerView={1.5}
           spaceBetween={10}
@@ -38,7 +38,6 @@ export function CarouselProduct({ productList }) {
               spaceBetween: 40,
             },
           }}
-          modules={[Pagination]}
           className="mySwiper"
         >
           <div className="grid grid-cols-1 aspect-2/3 gap-x-6 gap-y-12">
@@ -56,7 +55,6 @@ export function CarouselProduct({ productList }) {
                     sale={product.sale}
                     saleValue={product.saleValue}
                   />
-                  <p className="pb-14 max-md:pb-10"></p>
                 </SwiperSlide>
               ))}
           </div>
@@ -66,11 +64,13 @@ export function CarouselProduct({ productList }) {
   );
 }
 
-export function BestSeller({productList}) {
+export function BestSeller({ productList }) {
   return (
-    <div className="mx-40 flex-row mt-12 mb-24 max-md:mx-8">
-      <h1 className=" text-5xl font-medium max-md:mx-8 max-md:text-4xl max-md:text-center">Best Seller</h1>
-      <section className="my-12 grid grid-cols-4 gap-x-6 gap-y-12 max-md:grid-cols-2">
+    <div className="mx-40 flex-row mt-12 mb-24 max-md:mx-8 max-md:mt-10">
+      <h1 className="text-5xl font-medium max-md:mx-8 max-md:text-4xl max-md:text-center max-md:font-semibold">
+        Best Seller
+      </h1>
+      <section className="my-12 mt-4 grid grid-cols-4 gap-x-6 gap-y-12 max-md:grid-cols-2 max-md:gap-x-2 max-md:gap-y-4">
         {productList
           .filter((product) => product.tag === "HOT")
           .map((product) => (

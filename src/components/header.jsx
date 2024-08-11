@@ -48,12 +48,12 @@ function Header() {
             </p>
           </div>
 
-          <p
+          <button
             className="py-3 px-14 w-fit bg-dark text-white font-normal rounded-md cursor-pointer"
             id="button"
           >
             Shopping Now
-          </p>
+          </button>
         </div>
         <img
           src="images/people-header.png"

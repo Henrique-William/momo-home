@@ -16,7 +16,7 @@ function Socials() {
             @3legant_official
           </p>
         </div>
-        <div className="flex gap-6 justify-center max-md:flex-wrap">
+        <div className="w-full flex flex-wrap gap-6 justify-center">
           <img src="/images/instagram-1.png" alt="instagram img" />
           <img src="/images/instagram-2.png" alt="instagram img" />
           <img src="/images/instagram-3.png" alt="instagram img" />

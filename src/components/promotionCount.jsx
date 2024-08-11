@@ -36,7 +36,7 @@ function PromotionCount() {
       <img
         src="/images/promotion-img.png"
         alt=""
-        className="max-md:order-2 w-full object-center max-md:w-auto max-md:object-cover max-md:h-96"
+        className="max-md:order-2 w-full h-full object-cover max-md:w-full max-md:h-96"
       />
       {/* Count Down Container */}
       <div className="max-md:order-1 bg-promotion w-full h-full px-18 flex flex-col justify-center gap-6 max-md:px-8 max-md:py-7">
