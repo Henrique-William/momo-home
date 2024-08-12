@@ -12,8 +12,8 @@ function Product({ id, title, price, img, stars, tag, sale, saleValue }) {
           className="w-full h-full object-contain"
         />
         {/* Tags */}
-        <div className="absolute px-3 top-4 left-4">
-          <p className="bg-white rounded text-base font-bold pb-3">{tag}</p>
+        <div className="absolute flex flex-col gap-2 top-4 left-4">
+          <p className="bg-white rounded text-base font-bold px-3">{tag}</p>
 
           {/* Tag Sale */}
           {sale && (
