@@ -36,8 +36,8 @@ export const productList = [
     img: "/images/products/skullcandy-rail-wireless-earbuds.png",
     stars: 5,
     tag: "NEW",
-    sale: false,
-    saleValue: 0,
+    sale: true,
+    saleValue: 10,
   },
   {
     id: 5,
@@ -76,8 +76,8 @@ export const productList = [
     img: "/images/products/airpods-max.png",
     stars: 5,
     tag: "HOT",
-    sale: false,
-    saleValue: 0,
+    sale: true,
+    saleValue: 20,
   },
   {
     id: 8,

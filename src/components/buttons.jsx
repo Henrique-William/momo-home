@@ -38,3 +38,11 @@ export function ShopNow({ children }) {
     </button>
   );
 }
+
+export function Button({ children }) {
+  return(
+    <button className="w-full py-3 bg-dark text-white text-base rounded-lg">
+      {children}
+    </button>
+  )
+}

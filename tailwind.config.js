@@ -12,7 +12,9 @@ module.exports = {
         'max-2xl': { 'max': '1535px' }, // max-width: 1535px
       },
       padding: {
-        '18': '4.5rem'
+        '18': '4.5rem',
+        '22': '5.5rem',
+        '55': '13.75rem'
       },
       aspectRatio: {
         '2/3': '16 / 9',
@@ -22,7 +24,7 @@ module.exports = {
         '55': '13.75rem'
       },
       fontSize: {
-        section: '2.5rem'
+        section: '2.5rem',
       },
       fontFamily: {
         poppins: ['Poppins', 'sans-serif'],
@@ -32,9 +34,11 @@ module.exports = {
         gradient2: '#FEBD3B',
         primary: '#FFAB00',
         secondary: '#377DFF',
+        secondary2: '#38CB89',
         dark: '#141718',
         subtitle: '#6C7275',
         holder: '#F3F5F7',
+        grayBorder: '#E8ECEF',
         promotion: 'rgba(255, 171, 0, 0.4)',
         socials: '#F2F4F6'
       },

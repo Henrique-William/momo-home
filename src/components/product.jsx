@@ -11,17 +11,25 @@ function Product({ id, title, price, img, stars, tag, sale, saleValue }) {
           alt="imagem de fone"
           className="w-full h-full object-contain"
         />
-        {/* tag */}
-        <p className="absolute px-3 bg-white top-4 left-4 rounded text-base font-bold">
-          {tag}
-        </p>
+        {/* Tags */}
+        <div className="absolute px-3 top-4 left-4">
+          <p className="bg-white rounded text-base font-bold pb-3">{tag}</p>
+
+          {/* Tag Sale */}
+          {sale && (
+            <p className="px-3 bg-secondary2 rounded text-base font-bold text-white">
+              {`-${saleValue}%`}
+            </p>
+          )}
+        </div>
+
         <AddToBag />
         <ProductLikeButton productID={id} />
       </div>
 
       {/* info products */}
       <div className="h-24 flex flex-col justify-between gap-1">
-        <StarRating stars={stars} className="h-1/4"/>
+        <StarRating stars={stars} className="h-1/4" />
         <h4 className="h-2/4 text-dark font-semibold text-base">{title}</h4>
         {!sale ? (
           <p className="h-1/4 text-dark font-semibold text-sm">

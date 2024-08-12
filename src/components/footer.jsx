@@ -7,7 +7,7 @@ function Footer() {
           <div className="justify-between max-md:flex max-md:flex-col max-md:gap-10">
             <div className="flex gap-8 max-md:flex-col max-md:items-center">
               <img
-                src="images/logo-footer.png"
+                src="images/icon/logo-footer.svg"
                 alt="logo Elegant"
                 className="max-md:w-fit"
               />
@@ -49,9 +49,9 @@ function Footer() {
             </div>
           </div>
           <div className="flex items-center gap-6">
-            <img src="/images/icon/instagram.svg" alt="" />
-            <img src="/images/icon/facebook.svg" alt="" />
-            <img src="/images/icon/youtube.svg" alt="" />
+            <a href="https://www.instagram.com/" target="new"><img src="/images/icon/instagram.svg" alt="" /></a>
+            <a href="https://www.facebook.com/" target="new"><img src="/images/icon/facebook.svg" alt="" /></a>
+            <a href="https://www.youtube.com/" target="new"><img src="/images/icon/youtube.svg" alt="" /></a>
           </div>
         </div>
       </div>
