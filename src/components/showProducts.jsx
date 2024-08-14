@@ -12,7 +12,7 @@ export function CarouselProduct({ productList }) {
       <section className="my-12 ml-40 flex max-md:ml-8 max-md:mt-10">
         <Swiper
           slidesPerView={1.5}
-          spaceBetween={10}
+          spaceBetween={'24px'}
           pagination={{
             clickable: true,
           }}
@@ -75,7 +75,7 @@ export function BestSeller({ productList }) {
           .filter((product) => product.tag === "HOT")
           .map((product) => (
             <Product
-              key={product.id} // Use a unique identifier from the product object
+              key={product.id}
               id={product.id}
               title={product.title}
               price={product.price}

@@ -3,7 +3,7 @@ import StarRating from "./starRating";
 
 function Product({ id, title, price, img, stars, tag, sale, saleValue }) {
   return (
-    <div className="flex flex-col gap-3 group cursor-pointer h-full">
+    <div className="flex flex-col gap-3 group cursor-pointer h-full hover:scale-105 duration-500">
       {/* image-holder */}
       <div className="bg-holder w-full h-80 relative p-4 box-border">
         <img

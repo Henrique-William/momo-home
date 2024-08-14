@@ -62,15 +62,13 @@ function Signin() {
             {!isPaswordVisible ? (
               <FiEye
                 size={"24px"}
-                color="#6C7275"
-                className="absolute right-0 cursor-pointer"
+                className="absolute right-0 cursor-pointer stroke-dark hover:fill-dark hover:stroke-white hover:scale-125 duration-500 transition-all"  
                 onClick={togglePassword}
               />
             ) : (
               <FiEyeOff
                 size={"24px"}
-                color="#6C7275"
-                className="absolute right-0 cursor-pointer"
+                className="absolute right-0 cursor-pointer stroke-dark hover:fill-dark hover:stroke-white hover:scale-125 duration-500 transition-all"
                 onClick={togglePassword}
               />
             )}

@@ -19,8 +19,8 @@ function Home() {
       <BestSeller productList={productList}/>
       <PromotionCount/>
       <HomeInfo/>
-      <Socials />
-      <Footer />
+      <Socials/>
+      <Footer/>
     </>
   );
 }

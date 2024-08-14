@@ -14,7 +14,7 @@ function ShopCollection() {
       <section className="h-fit mx-40 mt-12 flex gap-6 max-md:mx-8 max-md:flex-col max-md:mt-4">
         {/* Headband */}
         <div
-          className="h-custom-664 w-1/2 bg-holder bg-no-repeat bg-center relative cursor-pointer max-md:w-full max-md:h-96"
+          className="h-custom-664 w-1/2 bg-holder bg-no-repeat bg-center relative cursor-pointer hover:scale-105 duration-500 max-md:w-full max-md:h-96"
           style={{
             backgroundImage: `url(${headbandImage})`,
             backgroundSize: "contain",
@@ -33,7 +33,7 @@ function ShopCollection() {
         <div className="h-custom-664 w-1/2 flex flex-col gap-6 max-md:w-full max-md:h-96">
           {/* Earbuds */}
           <div
-            className="relative flex bg-holder h-1/2 bg-no-repeat bg-contain bg-right cursor-pointer max-md:w-full"
+            className="relative flex bg-holder h-1/2 bg-no-repeat bg-contain bg-right cursor-pointer hover:scale-105 duration-500 max-md:w-full"
             style={{
               backgroundImage: `url(${earbudsImage})`,
               backgroundSize: "contain",
@@ -50,7 +50,7 @@ function ShopCollection() {
           </div>
           {/* Accessories */}
           <div
-            className="relative flex bg-holder h-1/2 bg-no-repeat bg-contain bg-right cursor-pointer max-md:w-full"
+            className="relative flex bg-holder h-1/2 bg-no-repeat bg-contain bg-right cursor-pointer hover:scale-105 duration-500 max-md:w-full"
             style={{
               backgroundImage: `url(${accessoriesImage})`,
               backgroundSize: "contain",

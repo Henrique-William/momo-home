@@ -11,14 +11,10 @@ export function ProductLikeButton() {
 
   return (
     <button
-      className="absolute top-4 right-4 p-2 bg-white rounded-full shadow-xl hidden group-hover:block"
+      className="absolute w-fit top-4 right-4 p-2 bg-white rounded-full shadow-xl hidden group-hover:block hover:scale-75 duration-500"
       onClick={toggleButton}
     >
-      {isliked ? (
-        <RiHeart3Fill width={20} height={20} />
-      ) : (
-        <RiHeart3Line width={20} height={20} />
-      )}
+      {isliked ? <RiHeart3Fill size={20} /> : <RiHeart3Line size={20} />}
     </button>
   );
 }
@@ -40,9 +36,9 @@ export function ShopNow({ children }) {
 }
 
 export function Button({ children }) {
-  return(
+  return (
     <button className="w-full py-3 bg-dark text-white text-base rounded-lg">
       {children}
     </button>
-  )
+  );
 }
