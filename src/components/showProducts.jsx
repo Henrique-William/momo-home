@@ -5,11 +5,11 @@ import "swiper/css";
 export function CarouselProduct({ productList }) {
   return (
     <div className="pt-12 flex-row max-md:pt-8">
-      <h1 className="mx-40 text-5xl font-medium max-md:mx-8 max-md:text-4xl max-md:text-center max-md:font-semibold">
+      <h1 className="px-40 text-5xl font-medium max-md:mx-8 max-md:text-4xl max-md:text-center max-md:font-semibold">
         New Arrivals
       </h1>
       {/* product list */}
-      <section className="my-12 ml-40 flex max-md:ml-8 max-md:mt-10">
+      <section className="py-12 pl-40 flex max-md:ml-8 max-md:mt-10">
         <Swiper
           slidesPerView={1.5}
           spaceBetween={'24px'}

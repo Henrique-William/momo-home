@@ -9,7 +9,7 @@ function Product({ id, title, price, img, stars, tag, sale, saleValue }) {
         <img
           src={img}
           alt="imagem de fone"
-          className="w-full h-full object-contain"
+          className="h-full w-full scale-75 object-scale-down "
         />
         {/* Tags */}
         <div className="absolute flex flex-col gap-2 top-4 left-4">

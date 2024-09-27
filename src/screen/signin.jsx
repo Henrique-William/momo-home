@@ -1,14 +1,40 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { FiEye, FiEyeOff } from "react-icons/fi";
 import { useState } from "react";
 import { Button } from "../components/buttons";
 import { Checkbox, Field } from "../components/inputs";
+import { usersList } from "../lists";
 
 function Signin() {
   const [isPaswordVisible, setIsPasswordVisible] = useState(false);
+  const [userID, setUser] = useState("");
+  const [passwordValue, setPassword] = useState("");
+  const navigate = useNavigate();
 
   function togglePassword() {
     setIsPasswordVisible(!isPaswordVisible);
+  }
+
+  const userName = (event) => {
+    const value = event.target.value;
+    setUser(value);
+  };
+
+  const password = (event) => {
+    const value = event.target.value;
+    setPassword(value);
+  };
+
+  function signin() {
+    const userSignin = usersList.find(
+      (user) => user.username || user.email === userID
+    );
+
+    if (userSignin.password === passwordValue) {
+      navigate("/home");
+    } else {
+      return false;
+    }
   }
 
   return (
@@ -48,9 +74,10 @@ function Signin() {
         >
           {/* Inputs */}
           <Field
-            type="email"
+            type="text"
             placeholder="Your username or email address"
             required={true}
+            inputValue={userName}
           />
           <div className="relative flex items-center">
             {/* Password */}
@@ -58,11 +85,12 @@ function Signin() {
               type={!isPaswordVisible ? "password" : "text"}
               placeholder="Password"
               required={true}
+              inputValue={password}
             />
             {!isPaswordVisible ? (
               <FiEye
                 size={"24px"}
-                className="absolute right-0 cursor-pointer stroke-dark hover:fill-dark hover:stroke-white hover:scale-125 duration-500 transition-all"  
+                className="absolute right-0 cursor-pointer stroke-dark hover:fill-dark hover:stroke-white hover:scale-125 duration-500 transition-all"
                 onClick={togglePassword}
               />
             ) : (
@@ -76,7 +104,7 @@ function Signin() {
           {/* Remember Me */}
           <div className="flex pl-1 justify-between">
             <div className="flex gap-3">
-              <Checkbox/>
+              <Checkbox />
               <p className="text-subtitle">Remember me</p>
             </div>
             <Link to="/signup" className="text-base font-semibold">
@@ -84,7 +112,7 @@ function Signin() {
             </Link>
           </div>
 
-          <Button>Sign In</Button>
+          <Button click={signin}>Sign In</Button>
         </form>
       </div>
     </div>

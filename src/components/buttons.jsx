@@ -5,8 +5,7 @@ export function ProductLikeButton() {
   const [isliked, setIsLiked] = useState(false);
 
   function toggleButton() {
-    const like = !isliked;
-    setIsLiked(like);
+    setIsLiked((prevLiked) => !prevLiked);
   }
 
   return (
@@ -20,9 +19,19 @@ export function ProductLikeButton() {
 }
 
 export function AddToBag() {
+  const [isBagged, setIsBagged] = useState(false);
+  function handleBag() {
+    setIsBagged((prevBagged) => !prevBagged);
+  }
+  
   return (
-    <button className="absolute bottom-4 left-4 right-4 bg-dark text-white py-3 rounded-lg text-base hidden group-hover:block">
-      Add to bag
+    <button
+      onClick={handleBag}
+      className={`absolute bottom-4 left-4 right-4 py-3 rounded-lg text-base hidden ${
+        !isBagged ? "bg-dark text-white" : "bg-subtitle text-white"
+      } group-hover:block`}
+    >
+      {!isBagged ? <p>Add to bag</p> : <p>Remove from bag</p>}
     </button>
   );
 }
@@ -35,9 +44,9 @@ export function ShopNow({ children }) {
   );
 }
 
-export function Button({ children }) {
+export function Button({ children, click }) {
   return (
-    <button className="w-full py-3 bg-dark text-white text-base rounded-lg">
+    <button className="w-full py-3 bg-dark text-white text-base rounded-lg" onClick={click}>
       {children}
     </button>
   );

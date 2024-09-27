@@ -1,4 +1,4 @@
-export function Field({ type, placeholder, value, required }) {
+export function Field({ type, placeholder, value, required, inputValue }) {
   return (
     <input
       type={type}
@@ -6,6 +6,7 @@ export function Field({ type, placeholder, value, required }) {
       value={value}
       required={required}
       className="w-full border-b-2 border-sp border-grayBorder pb-2 placeholder:text-base placeholder:text-subtitle"
+      onChange={inputValue}
     />
   );
 }   

@@ -3,7 +3,7 @@ import Menu from "./menu";
 
 function Header() {
   return (
-    <section className="h-screen w-screen max-w-full flex flex-col justify-between bg-gradient-to-b from-gradient1 to-gradient2 overflow-x-hidden">
+    <section className="h-screen w-screen max-w-full flex flex-col justify-between bg-gradient-to-b from-gradient1 to-gradient2 overflow-x-hidden overflow-y-hidden">
       {/* Header */}
       <div className="h-1/6">
         <Cupom />
@@ -13,7 +13,7 @@ function Header() {
         <img
           src="images/people-header.png"
           alt=""
-          className="w-2/4 object-contain h-full"
+          className="w-2/4 object-contain h-full md"
         />
 
         <div className="w-2/4 h-full flex flex-col justify-center ">

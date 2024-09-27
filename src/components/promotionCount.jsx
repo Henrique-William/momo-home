@@ -3,7 +3,7 @@ import { ShopNow } from "./buttons";
 
 function PromotionCount() {
   const calculateTimeLeft = () => {
-    const difference = +new Date("2024-08-13 : 23:59:59") - +new Date();
+    const difference = +new Date("2024-10-31 : 23:59:59") - +new Date();
     let timeLeft = {};
 
     if (difference > 0) {

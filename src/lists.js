@@ -151,11 +151,12 @@ export const productList = [
   },
 ];
 
-export const user = [
+export const usersList = [
   {
     id: "0001",
     name: "Henrique William Oliveira da Silva",
-    password: "123teste",
+    username: 'sucodeuvahj',
+    password: "Teste@123",
     email: "os.heriquewilliam@gmail.com",
     lists: [{ productWish: ["12", "4"] }, { productBag: ["10", "8"] }],
   },
